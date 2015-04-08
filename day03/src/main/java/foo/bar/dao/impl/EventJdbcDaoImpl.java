@@ -17,6 +17,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -65,6 +66,7 @@ public class EventJdbcDaoImpl implements EventJdbcDao {
         Long newEventId = eventIdToGuestList.keys().iterator().next();
         event.setId(newEventId);
         event.setGuests(Lists.newArrayList(eventIdToGuestList.get(newEventId)));
+        new HashMap(){{this.put("1", "1");}};
         return event;
     }
 
