@@ -1,0 +1,22 @@
+CREATE TABLE events
+(
+  id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE orders
+(
+  guest_id BIGINT NOT NULL,
+  event_id BIGINT NOT NULL
+);
+
+ALTER TABLE orders ADD PRIMARY KEY (guest_id, event_id);
+ALTER TABLE orders ADD FOREIGN KEY (guest_id) REFERENCES guests(id);
+ALTER TABLE orders ADD FOREIGN KEY (event_id) REFERENCES events(id);
+
+CREATE TABLE guests
+(
+  id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+

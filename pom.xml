@@ -8,6 +8,7 @@
     <modules>
         <module>day01</module>
         <module>day02</module>
+        <module>day03</module>
     </modules>
     <name>baruch-lesson-core</name>
     <url>http://maven.apache.org</url>
@@ -54,8 +55,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
